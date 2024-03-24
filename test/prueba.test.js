@@ -1,5 +1,4 @@
-// sum.test.js
-import { expect, describe, test, assertType } from 'vitest'
+import { expect, describe, test } from 'vitest'
 import {sumar,toString} from '../pruebas'
 describe('sumar', () => {
     test('Debe ser una funcion', () => {
@@ -26,6 +25,7 @@ describe ('toString',()=>{
         expect(()=>toString(null)).throw('La variable no puede ser nula');
     });
     test('Convertir cualquier parametro en nulos',()=>{
-        assertType<String>(toString(2));
+        expect(String(3)).toBeTypeOf('boolean')
     });
+
 })
